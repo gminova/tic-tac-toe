@@ -1,21 +1,79 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  background-color: antiquewhite;
+  border: 10px solid lightslategray;
+  border-radius: 5px;
+}
+
+.game {
+  padding-top: 40px;
+  font-family: "Permanent Marker", cursive;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.game-info {
+  padding-right: 10px;
 }
 
 ol,
 ul {
-  padding-left: 30px;
+  list-style-type: none;
+  padding: 5px;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  border: 1px solid lightslategray;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,.5);
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+.board {
+  display: block;
+  margin: 0 auto;
+}
+
+button {
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 0.5em;
+  width: 80px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.button__go-back {
+  font-family: "Permanent Marker", cursive;
+  background-color: white;
+  border-style: none;
+  margin: 2px;
+  min-height: 48px;
+  text-transform: lowercase;
+}
+
+.container {
+  width: 115px;
+  margin-top: 20px;
 }
 
 .board-row:after {
   clear: both;
   content: "";
   display: table;
-}
-
-.status {
-  margin-bottom: 10px;
 }
 
 .square {
@@ -31,21 +89,4 @@ ul {
   padding: 0;
   text-align: center;
   width: 34px;
-}
-
-.square:focus {
-  outline: none;
-}
-
-.kbd-navigation .square:focus {
-  background: #ddd;
-}
-
-.game {
-  display: flex;
-  flex-direction: row;
-}
-
-.game-info {
-  margin-left: 20px;
 }

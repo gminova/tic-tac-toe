@@ -23,7 +23,7 @@ class Board extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class="board">
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
@@ -88,10 +88,10 @@ class Game extends React.Component {
     const moves = history.map((step, move) => {
       const desc = move ?
         'Go to move #' + move :
-        'Go to game start';
+        'Go to start';
       return (
         <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button onClick={() => this.jumpTo(move)} class="button__go-back">{desc}</button>
         </li>
       );
     });
@@ -113,7 +113,7 @@ class Game extends React.Component {
 
         </div>
         <div className="game-info">
-          <div>{status}</div>
+          <div class="container">{status}</div>
           <ol>{moves}</ol>
         </div>
       </div>
