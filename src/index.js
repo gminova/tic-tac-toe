@@ -23,7 +23,7 @@ class Board extends React.Component {
 
   render() {
     return (
-      <div class="board">
+      <div className="board">
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
@@ -91,7 +91,7 @@ class Game extends React.Component {
         'Go to start';
       return (
         <li key={move}>
-          <button onClick={() => this.jumpTo(move)} class="button__go-back">{desc}</button>
+          <button onClick={() => this.jumpTo(move)} className="button__go-back">{desc}</button>
         </li>
       );
     });
@@ -113,7 +113,7 @@ class Game extends React.Component {
 
         </div>
         <div className="game-info">
-          <div class="container">{status}</div>
+          <div className="container">{status}</div>
           <ol>{moves}</ol>
         </div>
       </div>
